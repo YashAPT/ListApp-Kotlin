@@ -5,12 +5,16 @@
 
     <data>
 
+        <variable
+            name="mSharedViewModel"
+            type="com.example.listapp.fragments.SharedViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/listLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listLayout"
         tools:context=".fragments.list.ListFragment">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -34,8 +38,8 @@
             android:clickable="true"
             android:contentDescription="@string/app_name"
             android:focusable="true"
+            android:navigateToAddFragment="@{true}"
             android:src="@drawable/ic_add"
-
             app:backgroundTint="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,8 +50,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:alpha="0.5"
-
             android:contentDescription="@string/app_name"
+            android:emptyDatabase="@{mSharedViewModel.emptyDatabase}"
             android:src="@drawable/ic_no_data"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
@@ -63,6 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:alpha="0.5"
+            android:emptyDatabase="@{mSharedViewModel.emptyDatabase}"
             android:text="@string/no_data"
             android:textSize="16sp"
             android:visibility="invisible"
