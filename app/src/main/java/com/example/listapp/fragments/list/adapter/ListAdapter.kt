@@ -1,11 +1,9 @@
-package com.example.listapp.fragments.list
+package com.example.listapp.fragments.list.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.listapp.R
 import com.example.listapp.data.models.ToDoData
 import com.example.listapp.databinding.RowLayoutBinding
 
