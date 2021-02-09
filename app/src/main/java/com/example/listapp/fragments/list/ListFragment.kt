@@ -61,6 +61,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         recyclerView.adapter = adapter
         recyclerView.layoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+
         recyclerView.itemAnimator = SlideInUpAnimator().apply {
             addDuration = 300
         }
