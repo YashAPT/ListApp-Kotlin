@@ -16,6 +16,7 @@ import com.example.listapp.data.viewmodel.ToDoViewModel
 import com.example.listapp.databinding.FragmentListBinding
 import com.example.listapp.fragments.SharedViewModel
 import com.example.listapp.fragments.list.adapter.ListAdapter
+import com.example.listapp.utils.hideKeyboard
 import com.google.android.material.snackbar.Snackbar
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator
 
@@ -51,7 +52,7 @@ class ListFragment : Fragment(), SearchView.OnQueryTextListener {
         setHasOptionsMenu(true)
 
         // Hide soft keyboard
-        //hideKeyboard(requireActivity())
+        hideKeyboard(requireActivity())
 
         return binding.root
     }
